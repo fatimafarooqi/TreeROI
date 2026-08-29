@@ -261,7 +261,8 @@ frontend/
 │   ├── pages/
 │   │   └── Dashboard.jsx
 │   │
-│   ├── api.js
+│   ├── services
+|   |   └── api.js
 │   └── ...
 │
 ├── .env
