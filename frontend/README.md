@@ -25,13 +25,10 @@ The frontend is built with **React** and **Vite**.
 - Recommended interventions
 - Mock-data mode for interface testing without using API credits
 
-> **Current scope:** Area selection is intentionally limited to polygons.
-> Circle selection and file uploads are not currently included.
-
 ---
 
 ## Technology Stack
-
+```
 | Technology | Purpose |
 |---|---|
 | React | User interface |
@@ -39,7 +36,7 @@ The frontend is built with **React** and **Vite**.
 | React Leaflet | React integration for Leaflet maps |
 | Leaflet | Interactive maps |
 | Leaflet Draw | Polygon drawing tools |
-
+```
 ---
 
 ## Requirements
@@ -141,10 +138,10 @@ Draw a polygon around the urban area that should be analyzed.
 # 2. Configure the Analysis
 Provide:
 
-Analysis date
-Analysis time
-Heatmap granularity
-Number of top tiles to analyze
+- Analysis date
+- Analysis time
+- Heatmap granularity
+- Number of top tiles to analyze
 
 # 3. Run the Analysis
 Click Analyze Area.
@@ -155,12 +152,12 @@ The frontend sends the selected polygon and analysis parameters to:
 # 4. View the Results
 The dashboard displays the analysis returned by the backend, including:
 
-Heatmap information
-Prioritized tiles
-TreeROI scores
-Priority levels
-Tile diagnostics
-Recommended interventions
+- Heatmap information
+- Prioritized tiles
+- TreeROI scores
+- Priority levels
+- Tile diagnostics
+- Recommended interventions
 
 ---
 
@@ -203,10 +200,10 @@ to enable mock mode.
 
 In mock mode:
 
-No backend request is sent.
-No FortyGuard request is made.
-No FortyGuard API credits are consumed.
-The dashboard can be tested using predefined analysis results.
+- No backend request is sent.
+- No FortyGuard request is made.
+- No FortyGuard API credits are consumed.
+- The dashboard can be tested using predefined analysis results.
 
 ## For real analysis, set:
 
@@ -219,7 +216,7 @@ const USE_MOCK_DATA = false;
 
 The frontend does not communicate directly with FortyGuard.
 The request flow is:
-
+```
 User
   │
   ▼
@@ -241,7 +238,7 @@ TreeROI Frontend
   │
   ▼
 Dashboard
-
+```
 This keeps the FortyGuard API key on the backend rather than exposing it in
 the browser.
 
@@ -251,7 +248,7 @@ the browser.
 
 The main frontend structure is organized around pages, components, and API
 communication:
-
+```
 frontend/
 │
 ├── src/
@@ -271,3 +268,4 @@ frontend/
 ├── package.json
 ├── vite.config.js
 └── README.md
+```
