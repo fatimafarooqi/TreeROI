@@ -223,18 +223,22 @@ The backend contains a centralized FortyGuard client and service layer.
 The current analysis workflow uses the following FortyGuard capabilities:
 
 1. Heatmap
+
 Generates the urban temperature heatmap for the selected polygon and
 analysis time.
 
 2. Satellite Segmentation
+
 Provides satellite-based segmentation information used to identify factors
 such as tree and building coverage.
 
 3. Street View Segmentation
+
 Provides street-level visual segmentation information used for factors such
 as tree coverage, sky exposure, roads, and buildings.
 
 4. Environmental Parameters
+
 Provides environmental information used as additional context for tile
 diagnosis.
 
@@ -347,9 +351,11 @@ app.add_middleware(
 For local development:
 
 ```FRONTEND_URL=http://localhost:5173```
+
 For production:
 
 ```FRONTEND_URL=https://treeroidashboard.vercel.app```
+
 The value must match the frontend origin.
 
 ---
